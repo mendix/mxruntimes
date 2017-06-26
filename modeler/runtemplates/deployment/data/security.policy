@@ -42,6 +42,8 @@ ALLOW \{
   (java.util.PropertyPermission "HSSFRow.*" "read")
   (java.util.PropertyPermission "HSSFSheet.*" "read")
   (java.util.PropertyPermission "HSSFWorkbook.*" "read")
+  (java.util.PropertyPermission "hikaricp.configurationFile" "read")
+  (java.util.PropertyPermission "com.zaxxer.hikari.*" "read")
   (java.util.PropertyPermission "hornetq.version.property.filename" "read")
   (java.util.PropertyPermission "http.agent" "read")
   (java.util.PropertyPermission "http.keepAlive" "read,write")
