@@ -13,7 +13,7 @@
 		"runtime/bundles/com.mendix.integration.jar",
 		"runtime/bundles/org.osgi.compendium.jar",
 		"runtime/bundles/com.mendix.webui.jar",
-		"runtime/bundles/javax.servlet.jar"
+		"runtime/bundles/javax.servlet-api.servlet.jar"
 	],
 	"ProjectBundlesDir": "model/bundles",
 }
