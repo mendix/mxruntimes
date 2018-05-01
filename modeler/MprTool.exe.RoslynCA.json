@@ -18,7 +18,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/Find/FindUnitByIDForm.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/Find/FindUnitByIDForm.cs",
                 "region": {
                   "startLine": 6,
                   "startColumn": 30,
@@ -39,7 +39,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ObjectExplorer.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ObjectExplorer.cs",
                 "region": {
                   "startLine": 45,
                   "startColumn": 21,
@@ -52,7 +52,7 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ObjectExplorer.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ObjectExplorer.cs",
                 "region": {
                   "startLine": 46,
                   "startColumn": 40,
@@ -73,7 +73,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ObjectExplorer.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ObjectExplorer.cs",
                 "region": {
                   "startLine": 47,
                   "startColumn": 26,
@@ -86,7 +86,7 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ObjectExplorer.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ObjectExplorer.cs",
                 "region": {
                   "startLine": 49,
                   "startColumn": 40,
@@ -107,7 +107,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
                 "region": {
                   "startLine": 118,
                   "startColumn": 21,
@@ -120,7 +120,7 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
                 "region": {
                   "startLine": 125,
                   "startColumn": 13,
@@ -131,7 +131,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
                 "region": {
                   "startLine": 145,
                   "startColumn": 13,
@@ -142,7 +142,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
                 "region": {
                   "startLine": 150,
                   "startColumn": 13,
@@ -153,7 +153,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
                 "region": {
                   "startLine": 154,
                   "startColumn": 17,
@@ -164,7 +164,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
                 "region": {
                   "startLine": 157,
                   "startColumn": 21,
@@ -175,7 +175,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
                 "region": {
                   "startLine": 164,
                   "startColumn": 17,
@@ -186,7 +186,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
                 "region": {
                   "startLine": 167,
                   "startColumn": 21,
@@ -197,7 +197,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
                 "region": {
                   "startLine": 176,
                   "startColumn": 13,
@@ -208,7 +208,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
                 "region": {
                   "startLine": 178,
                   "startColumn": 17,
@@ -219,7 +219,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
                 "region": {
                   "startLine": 182,
                   "startColumn": 17,
@@ -252,7 +252,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ObjectExplorer.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ObjectExplorer.cs",
                 "region": {
                   "startLine": 106,
                   "startColumn": 21,
@@ -265,11 +265,45 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ObjectExplorer.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ObjectExplorer.cs",
                 "region": {
                   "startLine": 107,
                   "startColumn": 29,
                   "endLine": 107,
+                  "endColumn": 61
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3247",
+          "level": "warning",
+          "message": "Replace this type-check-and-cast sequence with an 'as' and a null check.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ObjectExplorer.cs",
+                "region": {
+                  "startLine": 113,
+                  "startColumn": 21,
+                  "endLine": 113,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ObjectExplorer.cs",
+                "region": {
+                  "startLine": 114,
+                  "startColumn": 29,
+                  "endLine": 114,
                   "endColumn": 61
                 }
               }
@@ -286,46 +320,12 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlImporter.cs",
                 "region": {
                   "startLine": 197,
                   "startColumn": 17,
                   "endLine": 197,
                   "endColumn": 29
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S3247",
-          "level": "warning",
-          "message": "Replace this type-check-and-cast sequence with an 'as' and a null check.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ObjectExplorer.cs",
-                "region": {
-                  "startLine": 113,
-                  "startColumn": 21,
-                  "endLine": 113,
-                  "endColumn": 55
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ObjectExplorer.cs",
-                "region": {
-                  "startLine": 114,
-                  "startColumn": 29,
-                  "endLine": 114,
-                  "endColumn": 61
                 }
               }
             }
@@ -341,7 +341,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
                 "region": {
                   "startLine": 91,
                   "startColumn": 14,
@@ -354,7 +354,7 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
                 "region": {
                   "startLine": 94,
                   "startColumn": 13,
@@ -365,7 +365,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
                 "region": {
                   "startLine": 95,
                   "startColumn": 63,
@@ -376,7 +376,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
                 "region": {
                   "startLine": 96,
                   "startColumn": 13,
@@ -387,7 +387,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
                 "region": {
                   "startLine": 97,
                   "startColumn": 63,
@@ -398,7 +398,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
                 "region": {
                   "startLine": 104,
                   "startColumn": 13,
@@ -409,7 +409,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
                 "region": {
                   "startLine": 107,
                   "startColumn": 13,
@@ -420,7 +420,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
                 "region": {
                   "startLine": 109,
                   "startColumn": 17,
@@ -431,7 +431,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
                 "region": {
                   "startLine": 111,
                   "startColumn": 21,
@@ -442,7 +442,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
                 "region": {
                   "startLine": 118,
                   "startColumn": 17,
@@ -453,7 +453,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
                 "region": {
                   "startLine": 120,
                   "startColumn": 21,
@@ -464,7 +464,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
                 "region": {
                   "startLine": 128,
                   "startColumn": 13,
@@ -475,7 +475,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
                 "region": {
                   "startLine": 130,
                   "startColumn": 17,
@@ -486,7 +486,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MprTool/ProjectXmlExporter.cs",
                 "region": {
                   "startLine": 136,
                   "startColumn": 17,

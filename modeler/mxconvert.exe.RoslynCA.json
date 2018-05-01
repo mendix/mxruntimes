@@ -18,7 +18,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build@3/modeler/Mendix.MxConvert/ConversionException.cs",
+                "uri": "file:///C:/jenkins/workspace/AppStudio3.0-Build/modeler/Mendix.MxConvert/ConversionException.cs",
                 "region": {
                   "startLine": 5,
                   "startColumn": 11,
