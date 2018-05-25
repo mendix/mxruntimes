@@ -9,6 +9,12 @@
 Class representing popup window features.
 </summary>
         </member>
+        <member name="P:CefSharp.BrowserSettings.OffScreenTransparentBackground">
+            <summary>
+When the WPF/OffScreen browser is created, specify if the background supports
+transparency
+</summary>
+        </member>
         <member name="P:CefSharp.BrowserSettings.WindowlessFrameRate">
             <summary>
 The maximum rate in frames per second (fps) that CefRenderHandler::OnPaint
@@ -136,6 +142,13 @@ were opened via JavaScript. Also configurable using the
 "disable-javascript-close-windows" command-line switch.
 </summary>
         </member>
+        <member name="P:CefSharp.BrowserSettings.JavascriptOpenWindows">
+            <summary>
+Controls whether JavaScript can be used for opening windows. Also
+configurable using the "disable-javascript-open-windows" command-line
+switch.
+</summary>
+        </member>
         <member name="P:CefSharp.BrowserSettings.Javascript">
             <summary>
 Controls whether JavaScript can be executed.
@@ -204,14 +217,14 @@ FixedFontFamily
 StandardFontFamily
 </summary>
         </member>
-        <member name="M:CefSharp.BrowserSettings.#ctor">
-            <summary>
-Default Constructor
-</summary>
-        </member>
         <member name="M:CefSharp.BrowserSettings.#ctor(CefStructBase&lt;CefBrowserSettingsTraits&gt;*)">
             <summary>
 Internal Constructor
+</summary>
+        </member>
+        <member name="M:CefSharp.BrowserSettings.#ctor">
+            <summary>
+Default Constructor
 </summary>
         </member>
         <member name="T:CefSharp.BrowserSettings">
@@ -277,7 +290,7 @@ Register the Widevine CDM plugin.
 See <see cref="M:CefSharp.Cef.RegisterWidevineCdm(System.String,CefSharp.IRegisterCdmCallback)" /> for more details.
 </summary>
             <param name="path"> is a directory that contains the Widevine CDM files</param>
-            <returns>Returns a Task that can be awaited to receive the <see cref="T:CefSharp.CdmRegistration" /> response.</returns>
+            <return>Returns a Task that can be awaited to receive the <see cref="T:CefSharp.CdmRegistration" /> response.</return>
         </member>
         <member name="M:CefSharp.Cef.RegisterWidevineCdm(System.String,CefSharp.IRegisterCdmCallback)">
             <summary>
@@ -331,13 +344,13 @@ Sets or clears a specific key-value pair from the crash metadata.
             <summary>
 Gets the Global Request Context. Make sure to Dispose of this object when finished.
 </summary>
-            <returns>Returns the global request context or null.</returns>
+            <return>Returns the global request context or null.</return>
         </member>
         <member name="M:CefSharp.Cef.CurrentlyOnThread(CefSharp.CefThreadIds)">
             <summary>
 Returns true if called on the specified CEF thread.
 </summary>
-            <returns>Returns true if called on the specified thread.</returns>
+            <return>Returns true if called on the specified thread.</return>
         </member>
         <member name="M:CefSharp.Cef.GetGeolocationAsync">
             <summary>
@@ -345,7 +358,7 @@ Request a one-time geolocation update.
 This function bypasses any user permission checks so should only be
 used by code that is allowed to access location information. 
 </summary>
-            <returns>Returns 'best available' location info or, if the location update failed, with error info.</returns>
+            <return>Returns 'best available' location info or, if the location update failed, with error info.</return>
         </member>
         <member name="M:CefSharp.Cef.GetGeolocation(CefSharp.IGetGeolocationCallback)">
             <summary>
@@ -353,7 +366,7 @@ Request a one-time geolocation update.
 This function bypasses any user permission checks so should only be
 used by code that is allowed to access location information. 
 </summary>
-            <returns>Returns 'best available' location info or, if the location update failed, with error info.</returns>
+            <return>Returns 'best available' location info or, if the location update failed, with error info.</return>
         </member>
         <member name="M:CefSharp.Cef.EnableHighDPISupport">
             <summary>
@@ -378,7 +391,7 @@ Cause the plugin list to refresh the next time it is accessed regardless of whet
 Async returns a list containing Plugin Information
 (Wrapper around CefVisitWebPluginInfo)
 </summary>
-            <returns>Returns List of <see cref="!:Plugin" /> structs.</returns>
+            <return>Returns List of <see cref="!:Plugin" /> structs.</return>
         </member>
         <member name="M:CefSharp.Cef.VisitWebPluginInfo(CefSharp.IWebPluginInfoVisitor)">
             <summary>
@@ -389,18 +402,7 @@ Visit web plugin information. Can be called on any thread in the browser process
             <summary>
 Clear all registered scheme handler factories.
 </summary>
-            <returns>Returns false on error.</returns>
-        </member>
-        <member name="M:CefSharp.Cef.ShutdownWithoutChecks">
-            <summary>
-This method should only be used by advanced users, if your unsure then use Cef.Shutdown().
-This function should be called on the main application thread to shut down
-the CEF browser process before the application exits. This method simply obtains a lock
-and calls the native CefShutdown method, only IsInitialized is checked. All ChromiumWebBrowser
-instances MUST be Disposed of before calling this method. If calling this method results in a crash
-or hangs then you're likely hanging on to some unmanaged resources or haven't closed all of your browser
-instances
-</summary>
+            <return>Returns false on error.</return>
         </member>
         <member name="M:CefSharp.Cef.Shutdown">
             <summary>
@@ -529,7 +531,7 @@ threads, your application will hang. See the documentation for Cef.Shutdown() fo
 </summary>
             <param name="cefSettings">CefSharp configuration settings.</param>
             <param name="performDependencyCheck">Check that all relevant dependencies avaliable, throws exception if any are missing</param>
-            <returns>true if successful; otherwise, false.</returns>
+            <return>true if successful; otherwise, false.</return>
         </member>
         <member name="M:CefSharp.Cef.Initialize(CefSharp.CefSettings)">
             <summary>
@@ -539,7 +541,7 @@ applicaiton thread (Typically the UI thead). If you call them on different
 threads, your application will hang. See the documentation for Cef.Shutdown() for more details.
 </summary>
             <param name="cefSettings">CefSharp configuration settings.</param>
-            <returns>true if successful; otherwise, false.</returns>
+            <return>true if successful; otherwise, false.</return>
         </member>
         <member name="M:CefSharp.Cef.Initialize">
             <summary>
@@ -549,7 +551,7 @@ It's important to note that Initialize and Shutdown <strong>MUST</strong> be cal
 applicaiton thread (Typically the UI thead). If you call them on different
 threads, your application will hang. See the documentation for Cef.Shutdown() for more details.
 </summary>
-            <returns>true if successful; otherwise, false.</returns>
+            <return>true if successful; otherwise, false.</return>
         </member>
         <member name="P:CefSharp.Cef.CefCommitHash">
             <summary>
@@ -589,7 +591,7 @@ addresses or empty list if no cached data is available.</param>
 Attempts to resolve origin to a list of associated IP addresses.
 </summary>
             <param name="origin">host name to resolve</param>
-            <returns>A task that represents the Resoolve Host operation. The value of the TResult parameter contains ResolveCallbackResult.</returns>
+            <return>A task that represents the Resoolve Host operation. The value of the TResult parameter contains ResolveCallbackResult.</return>
         </member>
         <member name="M:CefSharp.RequestContext.CloseAllConnections(CefSharp.ICompletionCallback)">
             <summary>
