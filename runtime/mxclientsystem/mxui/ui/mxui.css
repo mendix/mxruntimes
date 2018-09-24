@@ -2378,6 +2378,10 @@ div.dijitTabDisabled, .dj_ie div.dijitTabDisabled {
     cursor: pointer;
 }
 
+.mx-datagrid tr.mx-datagrid-row-empty {
+    cursor: default;
+}
+
 .mx-grid-search-controls .mx-button + .mx-button,
 .mx-grid-controlbar .mx-button + .mx-button {
     margin-left: 0.3em;
@@ -2465,6 +2469,13 @@ div.dijitTabDisabled, .dj_ie div.dijitTabDisabled {
 }
 .mx-datagrid-foot th {
     border-top: 1px solid #ddd;
+}
+
+.mx-datagrid-row-loading {
+    background: #F5F5F5;
+    border-radius: 4px;
+    width: 90%;
+    display: inline-block;
 }
 
 .mx-templategrid-content-wrapper {
