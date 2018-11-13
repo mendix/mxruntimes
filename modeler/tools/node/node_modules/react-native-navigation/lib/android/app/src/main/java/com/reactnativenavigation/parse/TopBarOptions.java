@@ -5,7 +5,7 @@ import android.util.Log;
 
 import com.reactnativenavigation.BuildConfig;
 import com.reactnativenavigation.parse.params.Bool;
-import com.reactnativenavigation.parse.params.Color;
+import com.reactnativenavigation.parse.params.Colour;
 import com.reactnativenavigation.parse.params.Fraction;
 import com.reactnativenavigation.parse.params.NullBool;
 import com.reactnativenavigation.parse.params.NullColor;
@@ -43,6 +43,9 @@ public class TopBarOptions {
         options.elevation = FractionParser.parse(json, "elevation");
         options.buttons = TopBarButtons.parse(typefaceLoader, json);
 
+        options.rightButtonColor = ColorParser.parse(json, "rightButtonColor");
+        options.leftButtonColor = ColorParser.parse(json, "leftButtonColor");
+
         options.validate();
         return options;
     }
@@ -59,7 +62,19 @@ public class TopBarOptions {
     public Number height = new NullNumber();
     public Fraction elevation = new NullFraction();
     public Fraction borderHeight = new NullFraction();
-    public Color borderColor = new NullColor();
+    public Colour borderColor = new NullColor();
+
+    // Deprecated
+    public Colour rightButtonColor = new NullColor();
+    public Colour leftButtonColor = new NullColor();
+    public Colour rightButtonDisabledColor = new NullColor();
+    public Colour leftButtonDisabledColor = new NullColor();
+
+    public TopBarOptions copy() {
+        TopBarOptions result = new TopBarOptions();
+        result.mergeWith(this);
+        return result;
+    }
 
     void mergeWith(final TopBarOptions other) {
         title.mergeWith(other.title);
@@ -75,10 +90,16 @@ public class TopBarOptions {
         if (other.borderHeight.hasValue()) borderHeight = other.borderHeight;
         if (other.borderColor.hasValue()) borderColor = other.borderColor;
         if (other.elevation.hasValue()) elevation = other.elevation;
+
+        if (other.rightButtonColor.hasValue()) rightButtonColor = other.rightButtonColor;
+        if (other.leftButtonColor.hasValue()) leftButtonColor = other.leftButtonColor;
+        if (other.rightButtonDisabledColor.hasValue()) rightButtonDisabledColor = other.rightButtonDisabledColor;
+        if (other.leftButtonDisabledColor.hasValue()) leftButtonDisabledColor = other.leftButtonDisabledColor;
+
         validate();
     }
 
-    void mergeWithDefault(TopBarOptions defaultOptions) {
+    public TopBarOptions mergeWithDefault(TopBarOptions defaultOptions) {
         title.mergeWithDefault(defaultOptions.title);
         subtitle.mergeWithDefault(defaultOptions.subtitle);
         background.mergeWithDefault(defaultOptions.background);
@@ -92,10 +113,17 @@ public class TopBarOptions {
         if (!borderHeight.hasValue()) borderHeight = defaultOptions.borderHeight;
         if (!borderColor.hasValue()) borderColor = defaultOptions.borderColor;
         if (!elevation.hasValue()) elevation = defaultOptions.elevation;
+
+        if (!rightButtonColor.hasValue()) rightButtonColor = defaultOptions.rightButtonColor;
+        if (!leftButtonColor.hasValue()) leftButtonColor = defaultOptions.leftButtonColor;
+        if (!rightButtonDisabledColor.hasValue()) rightButtonDisabledColor = defaultOptions.rightButtonDisabledColor;
+        if (!leftButtonDisabledColor.hasValue()) leftButtonDisabledColor = defaultOptions.leftButtonDisabledColor;
+
         validate();
+        return this;
     }
 
-    private void validate() {
+    public void validate() {
         if (title.component.hasValue() && (title.text.hasValue() || subtitle.text.hasValue())) {
             if (BuildConfig.DEBUG) Log.w("RNN", "A screen can't use both text and component - clearing text.");
             title.text = new NullText();

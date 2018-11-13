@@ -7,10 +7,10 @@
     "module": "commonjs",
     "jsx": "react-native",
     "declaration": true,
+    "skipLibCheck": true,
     "types": [
       "jest",
       "lodash",
-      "prop-types",
       "react",
       "react-native",
       "react-test-renderer"
