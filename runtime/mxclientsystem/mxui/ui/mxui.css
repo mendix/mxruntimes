@@ -2688,12 +2688,26 @@ input[type="checkbox"] {
 .mx-datagrid-foot th {
     border-top: 1px solid #ddd;
 }
-
-.mx-datagrid-row-loading {
-    background: #F5F5F5;
-    border-radius: 4px;
-    width: 90%;
+.mx-datagrid.mx-content-loading .mx-content-loader {
     display: inline-block;
+    width: 90%;
+    animation: placeholderGradient 1s linear infinite;
+    border-radius: 4px;
+    background: #F5F5F5;
+    background: repeating-linear-gradient(to right, #F5F5F5 0%, #F5F5F5 5%, #F9F9F9 50%, #F5F5F5 95%, #F5F5F5 100%);
+    background: -webkit-repeating-linear-gradient(to right, #F5F5F5 0%, #F5F5F5 5%, #F9F9F9 50%, #F5F5F5 95%, #F5F5F5 100%);
+    background: -moz-repeating-linear-gradient(to right, #F5F5F5 0%, #F5F5F5 5%, #F9F9F9 50%, #F5F5F5 95%, #F5F5F5 100%);
+    background-size: 200px 100px;
+    animation-fill-mode: both;
+}
+@keyframes placeholderGradient {
+    0% { background-position: 100px 0; }
+    100% { background-position: -100px 0; }
+}
+
+.mx-datagrid-table-resizing th,
+.mx-datagrid-table-resizing td {
+    cursor: col-resize !important;
 }
 
 .mx-templategrid-content-wrapper {
