@@ -21,8 +21,8 @@ describe('Store', () => {
     it('holds original components classes by componentName', () => {
         const MyComponent = class {
         };
-        uut.setOriginalComponentClassForName('example.mycomponent', MyComponent);
-        expect(uut.getOriginalComponentClassForName('example.mycomponent')).toEqual(MyComponent);
+        uut.setComponentClassForName('example.mycomponent', MyComponent);
+        expect(uut.getComponentClassForName('example.mycomponent')).toEqual(MyComponent);
     });
     it('clean by component id', () => {
         uut.setPropsForId('refUniqueId', { foo: 'bar' });
