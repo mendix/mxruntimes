@@ -7,14 +7,7 @@
 @implementation RNNAnimationOptions
 
 - (instancetype)initWithDict:(NSDictionary *)dict {
-	self = [super init];
-	
-	self.animations = dict[@"animations"];
-	self.duration = dict[@"duration"];
-	self.springDamping = dict[@"springDamping"];
-	self.springVelocity = dict[@"springVelocity"];
-	
-	return self;
+	return [super initWithDict:dict];
 }
 
 - (NSNumber *)duration {

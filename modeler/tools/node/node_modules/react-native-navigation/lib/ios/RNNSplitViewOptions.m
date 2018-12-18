@@ -1,9 +1,9 @@
 #import "RNNSplitViewOptions.h"
-#import "RNNParentProtocol.h"
+#import "RNNRootViewProtocol.h"
 
 @implementation RNNSplitViewOptions
 
--(void)applyOn:(UIViewController<RNNParentProtocol> *)viewController {
+-(void)applyOn:(UIViewController<RNNRootViewProtocol> *)viewController {
 	
 	UISplitViewController *svc = (UISplitViewController*) viewController;
 

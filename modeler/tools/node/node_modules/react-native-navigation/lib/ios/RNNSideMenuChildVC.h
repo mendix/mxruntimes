@@ -1,5 +1,13 @@
+//
+//  RNNSideMenuChildVC.h
+//  ReactNativeNavigation
+//
+//  Created by Ran Greenberg on 09/02/2017.
+//  Copyright © 2017 Wix. All rights reserved.
+//
+
 #import <UIKit/UIKit.h>
-#import "RNNParentProtocol.h"
+#import "RNNRootViewProtocol.h"
 
 typedef NS_ENUM(NSInteger, RNNSideMenuChildType) {
 	RNNSideMenuChildTypeCenter,
@@ -8,16 +16,11 @@ typedef NS_ENUM(NSInteger, RNNSideMenuChildType) {
 };
 
 
-@interface RNNSideMenuChildVC : UIViewController <RNNParentProtocol>
+@interface RNNSideMenuChildVC : UIViewController <RNNRootViewProtocol>
 
 @property (readonly) RNNSideMenuChildType type;
-@property (readonly) UIViewController<RNNLayoutProtocol> *child;
+@property (readonly) UIViewController<RNNRootViewProtocol> *child;
 
-@property (nonatomic, retain) RNNLayoutInfo* layoutInfo;
-@property (nonatomic, retain) RNNViewControllerPresenter* presenter;
-@property (nonatomic, strong) RNNNavigationOptions* options;
-@property (nonatomic, strong) RNNNavigationOptions* defaultOptions;
-
-- (instancetype)initWithLayoutInfo:(RNNLayoutInfo *)layoutInfo childViewControllers:(NSArray *)childViewControllers options:(RNNNavigationOptions *)options defaultOptions:(RNNNavigationOptions *)defaultOptions presenter:(RNNViewControllerPresenter *)presenter type:(RNNSideMenuChildType)type;
+-(instancetype) initWithChild:(UIViewController<RNNRootViewProtocol>*)child type:(RNNSideMenuChildType)type;
 
 @end

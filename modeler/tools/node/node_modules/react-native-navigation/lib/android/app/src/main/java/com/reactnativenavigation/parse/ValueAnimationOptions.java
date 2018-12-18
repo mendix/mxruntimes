@@ -41,11 +41,14 @@ public class ValueAnimationOptions {
     private Interpolation interpolation = Interpolation.NO_VALUE;
 
     Animator getAnimation(View view) {
-        if (!from.hasValue() || !to.hasValue()) throw new IllegalArgumentException("Params 'from' and 'to' are mandatory");
-        ObjectAnimator animator = ObjectAnimator.ofFloat(view, animProp, from.get(), to.get());
-        animator.setInterpolator(interpolation.getInterpolator());
-        if (duration.hasValue()) animator.setDuration(duration.get());
-        if (startDelay.hasValue()) animator.setStartDelay(startDelay.get());
+        if (!this.from.hasValue() || !this.to.hasValue())
+            throw new IllegalArgumentException("Params 'from' and 'to' are mandatory");
+        ObjectAnimator animator = ObjectAnimator.ofFloat(view, animProp, this.from.get(), this.to.get());
+        animator.setInterpolator(this.interpolation.getInterpolator());
+        if (this.duration.hasValue())
+            animator.setDuration(this.duration.get());
+        if (this.startDelay.hasValue())
+            animator.setStartDelay(this.startDelay.get());
         return animator;
     }
 
@@ -53,7 +56,10 @@ public class ValueAnimationOptions {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        return animProp.equals(((ValueAnimationOptions) o).animProp);
+
+        ValueAnimationOptions options = (ValueAnimationOptions) o;
+
+        return animProp.equals(options.animProp);
     }
 
     @Override
