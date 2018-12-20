@@ -11,10 +11,15 @@ class Element extends React.Component {
 }
 Element.propTypes = {
     elementId: PropTypes.string.isRequired,
-    resizeMode: PropTypes.string
+    resizeMode: PropTypes.string,
+    ...react_native_1.View.propTypes
 };
 Element.defaultProps = {
     resizeMode: ''
 };
 exports.Element = Element;
-RNNElement = react_native_1.requireNativeComponent('RNNElement', Element);
+RNNElement = react_native_1.requireNativeComponent('RNNElement', Element, {
+    nativeOnly: {
+        nativeID: true
+    }
+});
