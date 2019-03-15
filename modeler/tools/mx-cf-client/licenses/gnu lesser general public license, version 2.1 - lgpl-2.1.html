@@ -34,154 +34,7 @@
 
 <!-- start of server/banner.html -->
 <!-- start of head-include-2.html -->
-
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<style type="text/css" media="screen">
-<!-- 
-#translations
-{
-  border-bottom: .2em solid #001345;
-}
-#gnu-banner
-{
-  float: none;
-  padding-bottom: 0;
-}
-div#gnu-banner a, div#gnu-banner a strong
-{
-  color: white;
-}
-div#gnu-banner a strong, div#fundraiser p.message
-{
-  text-shadow: 0 1px 1px rgba(0,0,0,0.95),
-               0 1px 3px rgba(0,0,0,0.65),
-               0 2px 4px rgba(0,0,0,0.2);
-}
-div#header
-{
-  direction: ltr;
-  background-color: #243386;
-  position           : relative;
-  background-position: center;
-  background-size    : cover;
-  background-repeat  : none;
-  overflow           : hidden;
-}
-div#fundraiser p.message
-{
-  font-size: 1.1em;
-  text-align: center;
-  padding: .2em 0 .4em;
-  color: white;
-}
-div#header p.contribute
-{
-  line-height: 1.5em;
-  font-size: 1.2em;
-  text-align: center;
-  padding-bottom: .75em;
-  margin: 0;
-}
-#header a.join
-{
-  display: inline-block;
-  width: 4em;
-  text-align: center;
-  padding: 0 .5em;
-  margin: .3em .5em;
-  font-weight: bold;
-  color: black;
-  background-color: #f88d19;
-  border: 1px solid white;
-  border-radius: 1em;
-  -moz-border-radius: 1em;
-  -khtml-border-radius: 1em;
-  -webkit-border-radius: 1em;
-  -opera-border-radius: 1em;
-}
-#header b, #header b a[href]
-{
-  color: yellow;
-}
-div#fundraiser .progress
-{
-  width: 100%;
-  height: 1.1em;
-  line-height: 1.1em;
-  text-align: right;
-  background: #f9f2d5;
-  color: black;
-  font-weight: bold;
-  border: 1px solid white;
-  margin-bottom: 1em;
-}
-div#fundraiser .progress-bar
-{
-  line-height: 1.1em;
-  min-width: 2em;
-  background: #f88d19;
-  color: black;
-  text-align: right;
-} -->
-</style>
-<style type="text/css" media="screen">div#fundraiser .progress-bar
-{
-  width: 64%;
-}
-
-<!--
-div#fundraiser .goal-div
-{
-  position: relative;
-  bottom: 1.1em;
-  margin-right: .1em;
-}
-div#fundraiser .percentage, div#fundraiser .goal
-{
-  margin-right: .1em;
-}
-
-@media (max-width: 21em)
-{
-  div#fundraiser p.message { font-size: 0.8em; }
-}
-
-@media (min-width: 30em)
-{
-  #header {
-    background-image: url("/server/staging/fundraiser/1-departure-md-banner.jpg");
-  }
-  #fundraiser
-  {
-    float: left;
-    width: 70%;
-  }
-  div#fundraiser p.message, #gnu-banner
-  {
-    text-align: left;
-  }
-  div#header p.contribute
-  {
-    float: right;
-    text-align: right;
-    width: 30%;
-    margin-top: 4.5em;
-  }
-}
-
-@media (min-width: 60em)
-{
-  #fundraiser
-  {
-    width: 62%;
-  }
-  div#header p.contribute
-  {
-    text-align: center;
-  }
-}
--->
-</style>
 <!-- end of head-include-2.html -->
 
 </head>
@@ -227,36 +80,37 @@ div#fundraiser .percentage, div#fundraiser .goal
 <!-- end of server/body-include-1.html -->
 
 <!-- start of server/body-include-2 -->
+
 <div id="header">
+<div id="fsf-frame">
+<p id="join-fsf"><a href="https://www.fsf.org/associate/support_freedom?referrer=4052">JOIN&nbsp;THE&nbsp;FSF</a></p>
+<div id="fssbox">
+<p><a href="//www.fsf.org/fss">Free Software Supporter</a></p>
+<form action="https://my.fsf.org/civicrm/profile/create?reset=1&amp;gid=31"
+ method="post" class="header">
+ <div>
+  <input name="postURL" type="hidden" value="" />
+  <input type="hidden" name="group[25]" value="1" />
+  <input name="cancelURL" type="hidden" value="https://crm.fsf.org/civicrm/profile?reset=1&amp;gid=31" />
+  <input name="_qf_default" type="hidden" value="Edit:cancel" />
+ </div>
+ <p>
+  <input type="text" id="frmEmail" name="email-Primary" size="18" maxlength="80"
+         value="email address" onfocus="this.value=''"/>
+  <input type="submit" name="_qf_Edit_next" value="Sign up" />
+ </p>
+</form>
+</div><!-- /fssbox -->
+</div><!-- /fsf-frame -->
 
 <div id="gnu-banner">
  <a href="/">
- <img src="/server/staging/fundraiser/heckert_gnu.transp-white.small.png"
+ <img src="/graphics/heckert_gnu.transp.small.png"
       alt=" [A GNU head] " /><strong>GNU</strong> Operating System</a>
+
+<p id="fsf-support">Sponsored by the <a href="#mission-statement">Free Software Foundation</a></p>
 </div><!-- /gnu-banner -->
-
-<div id="fundraiser">
-<p class="message">
-With your help, we'll launch free software to new frontiers! Fuel the mission by
-becoming one of <b>400</b> new Associate Members by <b>January 1st</b> for
-<b>$10 per month</b> ($5 per month for students). <b><a
-href="https://fsf.org/appeal?pk_campaign=fall18&amp;pk_kwd=banner">Read more</a></b>.</p>
-
-<div class="progress">
-<div class="progress-bar">
-<span class="percentage"><span class="gnun-split"></span>257</span>
-</div>
-<div class="goal-div">
-<span class="goal">400</span>
-</div>
-</div>
-</div><!-- /fundraiser -->
-
-<p class="contribute">
-<a class="join"
-   href="https://my.fsf.org/join?pk_campaign=fall18&amp;pk_kwd=ban">
-Join</a>
-</p>
+<div style="clear:both"></div>
 </div><!-- /header -->
 
 <div id="navigation">
@@ -284,14 +138,17 @@ Join</a>
   <li id="tabSoftware"><a href="/software/software.html">SOFTWARE</a></li>
 
 
-  <li id="tabDoc"><a href="/doc/doc.html">DOCUMENTATION</a></li>
+  <li id="tabDoc"><a href="/doc/doc.html">DOCS</a></li>
 
 
   <li id="tabHelp"><a href="/help/help.html">HELP&nbsp;GNU</a></li>
 
+  <li id="more-links"><a href="#fsf-links">More &#9660;</a></li>
  </ul>
+ <div style="clear:both"></div>
 </div><!--  /navigation -->
 <!-- end of server/body-include-2 -->
+
 
 <div id="content">
 <!-- end of server/banner.html -->
@@ -963,17 +820,18 @@ That's all there is to it!</p>
 </div><!-- for id="content", starts in the include above -->
 
               <!-- begin server/footer-text.html -->
-<p id="backtotop"><a href="#header">BACK TO TOP</a></p>
+<div style="clear:both"></div>
+<div id="back-to-top"><a href="#navigation"><span>TOP</span> &#9650;</a></div>
 
 <hr class="no-display" />
 <div id="fsf-links">
  <ul>
-  <li><a href="//www.fsf.org/">FSF</a></li>
-  <li><a href="//directory.fsf.org">FREE&nbsp;SOFTWARE&nbsp;DIRECTORY</a></li>
+  <li class="gnu"><a href="/proprietary/proprietary.html">MALWARE</a></li>
+  <li class="gnu"><a href="/graphics/graphics.html">GNU&nbsp;ART</a></li>
+  <li class="gnu"><a href="/people/people.html">GNU'S&nbsp;WHO?</a></li>
+  <li class="gnu"><a href="/server/sitemap.html">SITEMAP</a></li>
+  <li><a href="//directory.fsf.org">SOFTWARE&nbsp;DIRECTORY</a></li>
   <li><a href="https://h-node.org/">HARDWARE</a></li>
-  <li><a href="/graphics/graphics.html">GNU&nbsp;ART</a></li>
-  <li><a href="/people/people.html">GNU'S&nbsp;WHO?</a></li>
-  <li><a href="/server/sitemap.html">SITE&nbsp;MAP</a></li>
  </ul>
 </div><!-- /fsf-links -->
 
@@ -987,14 +845,11 @@ mission to promote computer user freedom. We defend the rights of all
 software users.&rdquo;</strong></p>
 </blockquote>
 
-<p style="direction:ltr; text-align:left">
-The <a href="//www.fsf.org">Free Software Foundation</a> is
-the principal organizational sponsor of the GNU Operating System.
-<strong>Support GNU and the FSF</strong> by <a
-href="//shop.fsf.org/">buying manuals and gear</a>, <a
-href="https://my.fsf.org/associate/support_freedom?referrer=4052">
-<strong>joining the FSF</strong></a> as an associate member, or <a
-href="//donate.fsf.org/"><strong>making a donation</strong></a>.</p>
+<p id="support-the-fsf" class="button">
+  <a class="join" href="//www.fsf.org/associate/support_freedom?referrer=4052">JOIN</a>
+  <a class="donate" href="//donate.fsf.org/">DONATE</a>
+  <a class="shop" href="//shop.fsf.org/">SHOP</a>
+</p>
 
 </div><!-- /mission-statement -->
 <!-- end server/footer-text.html -->
