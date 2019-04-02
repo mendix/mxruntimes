@@ -2,16 +2,29 @@
 
 @implementation RNNSubtitleOptions
 
-- (instancetype)initWithDict:(NSDictionary *)dict {
-	self = [super init];
+- (NSDictionary *)fontAttributes {
+	NSMutableDictionary* navigationBarTitleTextAttributes = [NSMutableDictionary new];
+	if (self.fontFamily || self.fontSize || self.color) {
+//		if (self.color) {
+//			navigationBarTitleTextAttributes[NSForegroundColorAttributeName] = [RCTConvert UIColor:self.color];
+//		}
+		if (self.fontFamily){
+			if (self.fontSize) {
+				navigationBarTitleTextAttributes[NSFontAttributeName] = [UIFont fontWithName:self.fontFamily size:[self.fontSize floatValue]];
+			} else {
+				navigationBarTitleTextAttributes[NSFontAttributeName] = [UIFont fontWithName:self.fontFamily size:14];
+			}
+		} else if (self.fontSize) {
+			navigationBarTitleTextAttributes[NSFontAttributeName] = [UIFont systemFontOfSize:[self.fontSize floatValue]];
+		}
+	}
 	
-	self.text = [TextParser parse:dict key:@"text"];
-	self.alignment = [TextParser parse:dict key:@"alignment"];
-	self.fontFamily = [TextParser parse:dict key:@"fontFamily"];
-	self.fontSize = [NumberParser parse:dict key:@"fontSize"];
-	self.color = [ColorParser parse:dict key:@"color"];
-	
-	return self;
+	return navigationBarTitleTextAttributes;
 }
+
+- (NSNumber *)fontSize {
+	return _fontSize ? _fontSize : @(14);
+}
+
 
 @end

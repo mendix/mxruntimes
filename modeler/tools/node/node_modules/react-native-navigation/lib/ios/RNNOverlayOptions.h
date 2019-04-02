@@ -2,6 +2,6 @@
 
 @interface RNNOverlayOptions : RNNOptions
 
-@property (nonatomic, strong) Bool* interceptTouchOutside;
+@property (nonatomic, strong) NSNumber* interceptTouchOutside;
 
 @end

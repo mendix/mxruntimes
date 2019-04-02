@@ -3,15 +3,9 @@
 
 @implementation RNNSideMenuOptions
 
-- (instancetype)initWithDict:(NSDictionary *)dict {
-	self = [super init];
-	
-	self.left = [[RNNSideMenuSideOptions alloc] initWithDict:dict[@"left"]];
-	self.right = [[RNNSideMenuSideOptions alloc] initWithDict:dict[@"right"]];
-	self.animationType = [TextParser parse:dict key:@"animationType"];
-	
-	return self;
+- (void)applyOn:(UIViewController *)viewController {
+	[self.left applyOnSide:MMDrawerSideLeft viewController:viewController];
+	[self.right applyOnSide:MMDrawerSideRight viewController:viewController];
 }
-
 
 @end

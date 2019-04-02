@@ -3,9 +3,8 @@
 
 @interface RNNLargeTitleOptions : RNNOptions
 
-@property (nonatomic, strong) Number* fontSize;
-@property (nonatomic, strong) Bool* visible;
-@property (nonatomic, strong) Color* color;
-@property (nonatomic, strong) Text* fontFamily;
-
+@property (nonatomic, strong) NSNumber* fontSize;
+@property (nonatomic, strong) NSNumber* visible;
+@property (nonatomic, strong) NSNumber* color;
+@property (nonatomic, strong) NSString* fontFamily;
 @end

@@ -56,19 +56,13 @@ public class ImageLoader {
 
     @NonNull
     private Drawable getDrawable(Context context, String source) throws IOException {
-        Drawable drawable;
-
-        if (isLocalFile(Uri.parse(source))) {
-            drawable = loadFile(source);
+        if (BuildConfig.DEBUG) {
+            return readJsDevImage(context, source);
+        } else if (isLocalFile(Uri.parse(source))) {
+            return loadFile(source);
         } else {
-            drawable = loadResource(source);
-
-            if (drawable == null || BuildConfig.DEBUG) {
-                drawable = readJsDevImage(context, source);
-            }
+            return loadResource(source);
         }
-
-        return drawable;
     }
 
     @NonNull
