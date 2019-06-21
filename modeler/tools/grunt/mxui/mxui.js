@@ -8,7 +8,7 @@ require ([
 "mxui/lib/ColumnResizer",
 "mxui/lib/form/_FormBase",
 "mxui/lib/form/InlineForm",
-"mendix/components/Icon",
+"mendix/components/web/Icon",
 "mendix/lang",
 "mendix/validator",
 "mendix/lib/MxContext",

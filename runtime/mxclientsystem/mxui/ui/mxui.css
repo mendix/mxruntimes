@@ -3349,7 +3349,7 @@ body[dir="rtl"] .mx-header-left {
     right: auto;
     left: -2px;
 }
-.mx-fileinput .mx-focus {
+.mx-fileinput :focus {
     background-color: #e6e6e6;
 }
 

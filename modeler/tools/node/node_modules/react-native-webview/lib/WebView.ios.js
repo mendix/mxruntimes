@@ -285,7 +285,7 @@ var WebView = /** @class */ (function (_super) {
         else {
             NativeWebView = NativeWebView || RNCUIWebView;
         }
-        var webView = (<NativeWebView key="webViewKey" {...otherProps} decelerationRate={decelerationRate} messagingEnabled={typeof onMessage === 'function'} onLoadingError={this.onLoadingError} onLoadingFinish={this.onLoadingFinish} onLoadingProgress={this.onLoadingProgress} onLoadingStart={this.onLoadingStart} onMessage={this.onMessage} onShouldStartLoadWithRequest={onShouldStartLoadWithRequest} ref={this.webViewRef} scalesPageToFit={scalesPageToFit} 
+        var webView = (<NativeWebView key="webViewKey" {...otherProps} decelerationRate={decelerationRate} messagingEnabled={typeof onMessage === 'function'} onLoadingError={this.onLoadingError} onLoadingFinish={this.onLoadingFinish} onLoadingProgress={this.onLoadingProgress} onLoadingStart={this.onLoadingStart} onMessage={this.onMessage} onScroll={this.props.onScroll} onShouldStartLoadWithRequest={onShouldStartLoadWithRequest} ref={this.webViewRef} scalesPageToFit={scalesPageToFit} 
         // TODO: find a better way to type this.
         source={resolveAssetSource(this.props.source)} style={webViewStyles} {...nativeConfig.props}/>);
         return (<View style={styles.container}>
