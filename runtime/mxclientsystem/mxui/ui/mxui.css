@@ -2270,20 +2270,6 @@ div.dijitTabDisabled, .dj_ie div.dijitTabDisabled {
     offset to the parent if there is not enough room to display a scroll bar
     in the widget itself, so do not hide the overflow. */
 }
-/* Overrides taken from dijit_rtl.css for the dijit calendar widget that's
- * still used in reporting. */
-.dijitCalendarRtl .dijitCalendarNextYear {
-	margin:0 0.55em 0 0;
-}
-.dijitCalendarRtl .dijitCalendarPreviousYear {
-	margin:0 0 0 0.55em;
-}
-.dijitCalendarRtl .dijitCalendarDecrementArrow {
-	float: right;
-}
-.dijitCalendarRtl .dijitCalendarIncrementArrow {
-	float: left;
-}
 
 /* Global Bootstrap changes */
 
@@ -2304,13 +2290,46 @@ th > label {
     padding-top: 0;
     margin-bottom: 5px;
 }
+
 /* Bacause we use checkboxes without labels, align them with other widgets. */
 input[type="checkbox"] {
     margin: 9px 0;
 }
 
-.checkbox input[type="checkbox"] {
-    margin-top: 4px;
+.mx-checkbox input[type="checkbox"] {
+    margin-left: 0;
+    margin-right: 8px;
+    position: static;
+}
+
+.form-vertical .form-group.mx-checkbox input[type="checkbox"] {
+    display: block;
+}
+
+.form-vertical .form-group.mx-checkbox.label-after input[type="checkbox"] {
+    display: inline-block;
+}
+
+.form-horizontal .form-group.no-columns {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.mx-radiobuttons.inline .radio {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.mx-radiobuttons .radio input[type="radio"] {
+    /* Reset bootstrap rules */
+    position: static;
+    margin-right: 8px;
+    margin-left: 0;
+}
+
+.mx-radiobuttons .radio label {
+    /* Reset bootstrap rules */
+    padding-left: 0;
 }
 
 .alert {
@@ -2327,9 +2346,10 @@ input[type="checkbox"] {
 .mx-static-label {
     font-weight: normal;
 }
+html, body, #content {
+    height: 100%;
+}
 #content > .mx-page {
-    position: absolute;
-    top: 0;
     width: 100%;
     min-height: 100%;
 }
@@ -2481,6 +2501,18 @@ input[type="checkbox"] {
     background: url(data:image/gif;base64,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);
 }
 
+.mx-compound-control {
+    display: flex;
+}
+
+.mx-compound-control button {
+    margin-left: 5px;
+}
+
+[dir="rtl"] .mx-compound-control button {
+    margin-right: 5px;
+}
+
 .mx-tooltip {
     margin: 10px;
 }
@@ -2536,25 +2568,51 @@ input[type="checkbox"] {
     padding: 8px;
     overflow: hidden; /* to prevent any margin from escaping grid and foobaring our size calculations */
 }
+.mx-grid-controlbar, .mx-grid-searchbar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 .mx-grid-controlbar .mx-button,
 .mx-grid-search-controls .mx-button {
     margin-bottom: 8px;
 }
+
+.mx-grid-search-controls .mx-button + .mx-button,
+.mx-grid-controlbar .mx-button + .mx-button {
+    margin-left: 0.3em;
+}
+
+[dir="rtl"] .mx-grid-search-controls .mx-button + .mx-button,
+[dir="rtl"] .mx-grid-controlbar .mx-button + .mx-button {
+    margin-left: 0;
+    margin-right: 0.3em;
+}
+
 .mx-grid-pagingbar,
 .mx-grid-search-controls {
-    float: right;
-    margin-left: 5px;
+    display: flex;
+    white-space: nowrap;
+    align-items: baseline;
+    margin-left: auto;
 }
-/* Make button padding clickable in ie8. To reproduce the issue
- * open the result of http://jsfiddle.net/yLr21hjL/5/ in IE8. */
-.dj_ie8 .mx-grid-toolbar {
-    background: #fff;
-}
-.dj_rtl .mx-grid-pagingbar,
-.dj_rtl .mx-grid-search-controls {
-    float: left;
+
+.mx-grid-toolbar, .mx-grid-search-inputs {
     margin-right: 5px;
+    flex: 1;
 }
+
+[dir="rtl"] .mx-grid-toolbar,
+[dir="rtl"] .mx-grid-search-inputs {
+    margin-left: 5px;
+    margin-right: 0px;
+}
+[dir="rtl"] .mx-grid-pagingbar,
+[dir="rtl"] .mx-grid-search-controls {
+    margin-left: 0px;
+    margin-right: auto;
+}
+
 .mx-grid-paging-status {
     padding: 0 8px 5px;
 }
@@ -2565,9 +2623,6 @@ input[type="checkbox"] {
     vertical-align: top;
     margin-bottom: 8px;
 }
-.dj_ie8 .mx-grid-search-item {
-    float: left; /* to fix bizar IE8 render bug */
-}
 .mx-grid-search-label {
     width: 110px;
     padding: 0 5px;
@@ -2576,7 +2631,7 @@ input[type="checkbox"] {
     vertical-align: top;
     overflow: hidden;
 }
-.dj_rtl .mx-grid-search-label {
+[dir="rtl"] .mx-grid-search-label {
     text-align: left;
 }
 .mx-grid-search-input {
@@ -2585,11 +2640,42 @@ input[type="checkbox"] {
     display: inline-block;
     vertical-align: top;
 }
+.mx-grid-search-message {
+    flex-basis: 100%;
+}
 
 /* widget combinations */
 .mx-dataview .mx-grid {
     border: 1px solid #ddd;
     border-radius: 3px;
+}
+
+.mx-calendar {
+    z-index: 1000;
+}
+
+.mx-calendar-month-dropdown-options {
+    position: absolute;
+}
+
+.mx-calendar, .mx-calendar-month-dropdown {
+    user-select: none;
+}
+
+.mx-calendar-month-dropdown, .mx-calendar-month-current {
+    display: inline-block;
+}
+
+.mx-calendar-month-spacer {
+    position: relative;
+    height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.mx-calendar, .mx-calendar-month-dropdown-options {
+    border: 1px solid lightgrey;
+    background-color: white;
 }
 
 .mx-datagrid tr {
@@ -2600,24 +2686,24 @@ input[type="checkbox"] {
     cursor: default;
 }
 
-.mx-grid-search-controls .mx-button + .mx-button,
-.mx-grid-controlbar .mx-button + .mx-button {
-    margin-left: 0.3em;
+.mx-datagrid table {
+    width: 100%;
+    max-width: 100%;
+    table-layout: fixed;
+    margin-bottom: 0;
+}
+
+.mx-datagrid th, .mx-datagrid td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: bottom;
+    border: 1px solid #ddd;
 }
 
 /* head */
-.mx-datagrid-head-table {
-    position: relative;
-    table-layout: fixed;
-    background-color: #fff;
-    margin-bottom: 0;
-}
-.mx-datagrid .mx-datagrid-head th {
-    padding: 0;
-}
-.mx-datagrid-head-wrapper {
-    position: relative;
-    padding: 8px;
+.mx-datagrid th {
+    position: relative; /* Required for the positioning of the column resizers */
+    border-bottom-width: 2px;
 }
 .mx-datagrid-head-caption {
     overflow: hidden;
@@ -2627,10 +2713,9 @@ input[type="checkbox"] {
     float: right;
     padding-left: 5px;
 }
-.dj_rtl .mx-datagrid-sort-icon {
+[dir="rtl"] .mx-datagrid-sort-icon {
     float: left;
-    padding: 0;
-    padding-right: 5px;
+    padding: 0 5px 0 0;
 }
 .mx-datagrid-column-resizer {
     position: absolute;
@@ -2640,37 +2725,26 @@ input[type="checkbox"] {
     height: 100%;
     cursor: col-resize;
 }
-.dj_rtl .mx-datagrid-column-resizer {
+[dir="rtl"] .mx-datagrid-column-resizer {
     left: auto;
     right: -6px;
 }
-/* th's border sticking trough resize handle when it does not have a background in IE up to 9 */
-.dj_ie .mx-datagrid-column-resizer {
-    background: #fff;
-    opacity: 0;
-    filter: alpha(opacity=0);
-}
 
 /* body */
-.mx-datagrid-body-table {
-    table-layout: fixed;
-    border-top: none;
-    margin-bottom: 0;
-}
-.mx-datagrid-body-table tr:first-child td {
+.mx-datagrid tbody tr:first-child td {
     border-top: none;
 }
-.mx-datagrid-body-table td {
-    padding: 5px 8px;
+.mx-datagrid tbody tr:nth-child(2n+1) td {
+    background-color: #f9f9f9;
 }
-.mx-datagrid .mx-datagrid-body-table .selected td {
+.mx-datagrid tbody .selected td {
     background-color: #eee;
 }
 .mx-datagrid-data-wrapper {
     overflow: hidden;
     white-space: nowrap;
 }
-.mx-datagrid-body-table img {
+.mx-datagrid tbody img {
     max-width: 16px;
     max-height: 16px;
 }
@@ -2681,11 +2755,11 @@ input[type="checkbox"] {
 }
 
 /* foot */
-.mx-datagrid-foot th,
-.mx-datagrid-foot td {
+.mx-datagrid tfoot th,
+.mx-datagrid tfoot td {
     padding: 3px 8px;
 }
-.mx-datagrid-foot th {
+.mx-datagrid tfoot th {
     border-top: 1px solid #ddd;
 }
 .mx-datagrid.mx-content-loading .mx-content-loader {
@@ -2857,7 +2931,7 @@ input[type="checkbox"] {
     margin-left: 8px;
     padding: 5px 0;
 }
-.dj_rtl .mx-navigationtree ul li ul li {
+[dir="rtl"] .mx-navigationtree ul li ul li {
     margin-left: auto;
     margin-right: 8px;
 }
@@ -2935,7 +3009,7 @@ input[type="checkbox"] {
 .mx-groupbox-collapse-icon {
     float: right;
 }
-.dj_rtl .mx-groupbox-collapse-icon {
+[dir="rtl"] .mx-groupbox-collapse-icon {
     float: left;
 }
 
@@ -3043,7 +3117,7 @@ input[type="checkbox"] {
     vertical-align: middle;
     margin-right: 10px;
 }
-.dj_rtl .mx-dropdown-list img {
+[dir="rtl"] .mx-dropdown-list img {
     margin-left: 10px;
     margin-right: auto;
 }
@@ -3080,7 +3154,36 @@ body[dir="rtl"] .mx-header-left {
 .mx-listview {
     padding: 8px;
 }
-.mx-listview-clickable * {
+.mx-listview > ul {
+    padding: 0px;
+    list-style: none;
+}
+.mx-listview > ul > li {
+    padding: 5px 10px 10px;
+    border: 1px #ddd;
+    border-style: solid solid none;
+    background-color: #fff;
+    outline: none;
+}
+.mx-listview > ul > li:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.mx-listview > ul > li:last-child {
+    border-bottom-style: solid;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.mx-listview li:nth-child(2n+1) {
+    background: #f9f9f9;
+}
+.mx-listview li:nth-child(2n+1):hover {
+    background: #f5f5f5;
+}
+.mx-listview > ul > li.selected {
+    background: #eee;
+}
+.mx-listview-clickable ul * {
     cursor: pointer;
 }
 .mx-listview-empty {
@@ -3093,27 +3196,25 @@ body[dir="rtl"] .mx-header-left {
     text-align: center;
 }
 .mx-listview-searchbar {
+    display: flex;
     margin-bottom: 10px;
 }
-.mx-listview-clear-button {
-    float: right;
-    width: auto;
+.mx-listview-searchbar > input {
+    width: 100%;
+}
+.mx-listview-searchbar > button {
     margin-left: 5px;
 }
-.dj_rtl .mx-listview-clear-button {
-    float: left;
+[dir="rtl"] .mx-listview-searchbar > button {
     margin-left: 0;
     margin-right: 5px;
-}
-.mx-listview-search-input {
-    overflow: hidden;
 }
 .mx-listview-selection {
     display: table-cell;
     vertical-align: middle;
     padding: 0 15px 0 5px;
 }
-.dj_rtl .mx-listview-selection {
+[dir="rtl"] .mx-listview-selection {
     padding: 0 5px 0 15px;
 }
 .mx-listview-selectable .mx-listview-content {
@@ -3127,12 +3228,6 @@ body[dir="rtl"] .mx-header-left {
 .mx-listview .mx-table th,
 .mx-listview .mx-table td {
     padding: 2px;
-}
-.mx-listview-item {
-    outline: none;
-}
-.mx-list > .mx-listview-item.selected {
-    background: #eee;
 }
 
 .mx-login .form-control {
@@ -3207,37 +3302,6 @@ body[dir="rtl"] .mx-header-left {
     background: url(data:image/gif;base64,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);
 }
 
-.mx-referenceselector-select-button,
-.mx-referenceselector-goto-button {
-    width: auto;
-    float: right;
-    margin-left: 5px;
-}
-.dj_rtl .mx-referenceselector-select-button,
-.dj_rtl .mx-referenceselector-goto-button {
-    width: auto;
-    float: left;
-    margin-left: 0;
-    margin-right: 5px;
-}
-.mx-referenceselector-input-wrapper {
-    overflow: hidden;
-}
-
-.mx-referencesetselector-select-button {
-    width: auto;
-    float: right;
-    margin-left: 5px;
-}
-.dj_rtl .mx-referencesetselector-select-button {
-    float: left;
-    margin-left: 0;
-    margin-right: 5px;
-}
-.mx-referencesetselector-input-wrapper {
-    overflow: hidden;
-}
-
 .mx-reload-notification {
     position: fixed;
     z-index: 1001;
@@ -3259,19 +3323,19 @@ body[dir="rtl"] .mx-header-left {
     white-space: pre-line;
 }
 
-.mx-textarea-input {
+.mx-textarea textarea {
     resize: none;
     overflow-y: hidden;
 }
-.mx-textarea-input-noresize {
+.mx-textarea .mx-textarea-noresize {
     height: auto;
     resize: vertical;
     overflow-y: auto;
 }
-.mx-textarea-counter {
+.mx-textarea .mx-textarea-counter {
     font-size: smaller;
 }
-.mx-textarea-readonly-text {
+.mx-textarea .form-control-static {
     white-space: pre-line;
 }
 
@@ -3305,52 +3369,14 @@ body[dir="rtl"] .mx-header-left {
     max-width: none;
 }
 
-.mx-dateinput {
-    clear: both;
-}
-.mx-dateinput-select-button {
-    width: auto;
-    float: right;
-    margin-left: 5px;
-}
-.dj_rtl .mx-dateinput-select-button {
-    float: left;
-    margin-left: 0px;
-    margin-right: 5px;
-}
-.mx-dateinput-input-wrapper {
-    overflow: hidden;
-}
-
-.mx-fileinput .mx-wrapped-label {
-    display: inline-block;
-    width: 150px;
-    background-color: #f7f7f7;
-    cursor: auto;
-}
-.mx-fileinput .mx-normal-form {
-    display: inline-block;
-}
-.mx-fileinput .mx-wrapped-form {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    overflow: hidden;
-}
-.mx-fileinput .mx-wrapped-input {
+.mx-fileinput .mx-compound-control form, .mx-imageuploader .mx-compound-control form {
     position: absolute;
-    font-size: 50px;
-    bottom: 0;      /* bottom instead of top, to avoid a disappearing button in ie8 */
-    right: -2px;    /* to compensate for rouded corners */
-    opacity: 0;
-    filter: alpha(opacity=0);
-}
-.dj_rtl .mx-fileinput .mx-wrapped-input {
-    right: auto;
-    left: -2px;
-}
-.mx-fileinput :focus {
-    background-color: #e6e6e6;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    overflow: hidden;
 }
 
 .mx-dropdown li {
@@ -3538,8 +3564,31 @@ body[dir="rtl"] .mx-master-detail-content-hidden {
     padding: 5px;
 }
 
-.mx-reportmatrix-table {
+.mx-reportmatrix table {
+    width: 100%;
+    max-width: 100%;
+    table-layout: fixed;
     margin-bottom: 0;
+}
+
+.mx-reportmatrix th, .mx-reportmatrix td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: bottom;
+    border: 1px solid #ddd;
+}
+
+.mx-reportmatrix tbody tr:first-child td {
+    border-top: none;
+}
+
+.mx-reportmatrix tbody tr:nth-child(2n+1) td {
+    background-color: #f9f9f9;
+}
+
+.mx-reportmatrix tbody img {
+    max-width: 16px;
+    max-height: 16px;
 }
 
 

@@ -4,20 +4,13 @@ var styles = StyleSheet.create({
         flex: 1,
         overflow: 'hidden'
     },
-    errorContainer: {
+    loadingOrErrorView: {
+        position: 'absolute',
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'white'
-    },
-    hidden: {
-        height: 0,
-        flex: 0
-    },
-    loadingView: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        height: '100%',
+        width: '100%',
         backgroundColor: 'white'
     },
     loadingProgressBar: {
