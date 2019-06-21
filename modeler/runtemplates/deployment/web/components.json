@@ -1,10 +1,6 @@
 {
     "files": {
-        "css": [
-            "lib/bootstrap/css/bootstrap.min.css",
-            "mxclientsystem/mxui/ui/mxui.css",
-            "css/theme.css"
-        ],
+        "css": [],
         "js": [ "mxclientsystem/mxui/mxui.js" ]
     }
 }
