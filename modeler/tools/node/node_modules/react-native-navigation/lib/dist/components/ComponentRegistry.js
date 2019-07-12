@@ -1,18 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const react_native_1 = require("react-native");
 class ComponentRegistry {
-    constructor(store, componentEventsObserver, ComponentWrapperClass) {
+    constructor(store, componentEventsObserver, componentWrapper, appRegistryService) {
         this.store = store;
         this.componentEventsObserver = componentEventsObserver;
-        this.ComponentWrapperClass = ComponentWrapperClass;
+        this.componentWrapper = componentWrapper;
+        this.appRegistryService = appRegistryService;
     }
-    registerComponent(componentName, getComponentClassFunc, ReduxProvider, reduxStore) {
+    registerComponent(componentName, componentProvider, concreteComponentProvider, ReduxProvider, reduxStore) {
         const NavigationComponent = () => {
-            return this.ComponentWrapperClass.wrap(componentName, getComponentClassFunc, this.store, this.componentEventsObserver, ReduxProvider, reduxStore);
+            return this.componentWrapper.wrap(componentName.toString(), componentProvider, this.store, this.componentEventsObserver, concreteComponentProvider, ReduxProvider, reduxStore);
         };
-        this.store.setComponentClassForName(componentName, NavigationComponent);
-        react_native_1.AppRegistry.registerComponent(componentName, NavigationComponent);
+        this.store.setComponentClassForName(componentName.toString(), NavigationComponent);
+        this.appRegistryService.registerComponent(componentName.toString(), NavigationComponent);
         return NavigationComponent;
     }
 }
