@@ -1,8 +1,9 @@
 \{
   "watchFolders": [
+    "{ProjectDir:HtmlAttributeEncode}/deployment/native",
     "{ProjectDir:HtmlAttributeEncode}/deployment/web/widgets",
     "{ProjectDir:HtmlAttributeEncode}/theme",
-    "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules"
+    "{InstallDir:HtmlAttributeEncode}/modeler/tools/node"
   ],
   "resolver": \{
     "extraNodeModules": \{
@@ -11,7 +12,7 @@
       "mendix": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/mendix",
       "react": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react",
       "react-native": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native",
-      "react-native-ble-plx": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-ble-plx",
+      "react-native-ble-px": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-ble-px",
       "react-native-calendar-events": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-calendar-events",
       "react-native-camera": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-camera",
       "react-native-device-info": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-device-info",
@@ -28,8 +29,7 @@
       "react-native-vector-icons": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-vector-icons",
       "react-native-video": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-video",
       "react-native-view-shot": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-view-shot",
-      "react-native-webview": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-webview",
-      "@react-native-community/async-storage": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/@react-native-community/async-storage"
+      "react-native-webview": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-webview"
     \}
   \}
 \}

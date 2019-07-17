@@ -251,7 +251,6 @@ class MapMarker extends React.Component {
 
     this.showCallout = this.showCallout.bind(this);
     this.hideCallout = this.hideCallout.bind(this);
-    this.redrawCallout = this.redrawCallout.bind(this);
     this.animateMarkerToCoordinate = this.animateMarkerToCoordinate.bind(this);
   }
 
@@ -265,10 +264,6 @@ class MapMarker extends React.Component {
 
   hideCallout() {
     this._runCommand('hideCallout', []);
-  }
-
-  redrawCallout() {
-    this._runCommand('redrawCallout', []);
   }
 
   animateMarkerToCoordinate(coordinate, duration) {

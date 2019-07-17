@@ -4,7 +4,7 @@
  * Script that runs as part of `npm version`. It updates any files that have a
  * reference to the current package version:
  *
- * - gradle.properties
+ * - android/gradle.properties
  * x react-native-maps.podspec // <-- this is now dynamic
  * x react-native-google-maps.podspec // <-- this is now dynamic
  *
@@ -15,7 +15,7 @@ const { exec } = require('child_process');
 const pkg = require('../package.json');
 
 const filesToUpdate = [
-  'gradle.properties',
+  'android/gradle.properties',
 ];
 
 function doExec(cmdString) {

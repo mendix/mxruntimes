@@ -32,17 +32,7 @@ export const createNotSupportedComponent = message => () => {
   return null;
 };
 
-function getViewManagerConfig(viewManagerName) {
-  const UIManager = NativeModules.UIManager;
-  if (!UIManager.getViewManagerConfig) {
-    // RN < 0.58
-    return UIManager[viewManagerName];
-  }
-  // RN >= 0.58
-  return UIManager.getViewManagerConfig(viewManagerName);
-}
-
-export const googleMapIsInstalled = !!getViewManagerConfig(getAirMapName(PROVIDER_GOOGLE));
+export const googleMapIsInstalled = !!NativeModules.UIManager[getAirMapName(PROVIDER_GOOGLE)];
 
 export default function decorateMapComponent(Component, { componentType, providers }) {
   const components = {};
@@ -80,8 +70,8 @@ export default function decorateMapComponent(Component, { componentType, provide
   };
 
   Component.prototype.getUIManagerCommand = function getUIManagerCommand(name) {  // eslint-disable-line no-param-reassign,max-len
-    const componentName = getAirComponentName(this.context.provider, componentType);
-    return getViewManagerConfig(componentName).Commands[name];
+    return NativeModules.UIManager[getAirComponentName(this.context.provider, componentType)]
+      .Commands[name];
   };
 
   Component.prototype.getMapManagerCommand = function getMapManagerCommand(name) { // eslint-disable-line no-param-reassign,max-len

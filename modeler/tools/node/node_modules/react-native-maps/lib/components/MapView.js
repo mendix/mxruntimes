@@ -16,7 +16,6 @@ import MapPolyline from './MapPolyline';
 import MapPolygon from './MapPolygon';
 import MapCircle from './MapCircle';
 import MapCallout from './MapCallout';
-import MapCalloutSubview from './MapCalloutSubview';
 import MapOverlay from './MapOverlay';
 import MapUrlTile from './MapUrlTile';
 import MapLocalTile from './MapLocalTile';
@@ -162,14 +161,6 @@ const propTypes = {
   zoomEnabled: PropTypes.bool,
 
   /**
-   * If `false` the user won't be able to double tap to zoom the map.
-   * However it will greatly decrease delay of tap gesture recognition.
-   * Default value is `true`.
-   *
-   */
-  zoomTapEnabled: PropTypes.bool,
-
-  /**
    *If `false` the user won't be able to zoom the map
    * Default value is `true`.
    *
@@ -246,7 +237,6 @@ const propTypes = {
    * A Boolean indicating whether the map shows scale information.
    * Default value is `false`
    *
-   * @platform ios
    */
   showsScale: PropTypes.bool,
 
@@ -802,20 +792,6 @@ class MapView extends React.Component {
   }
 
   /**
-   * Get markers' centers and frames in user-space coordinates
-   *
-   * @param onlyVisible boolean true to include only visible markers, false to include all
-   *
-   * @return Promise Promise with { <identifier>: { point: Point, frame: Frame } }
-   */
-  getMarkersFrames(onlyVisible = false) {
-    if (Platform.OS === 'ios') {
-      return this._runCommand('getMarkersFrames', [onlyVisible]);
-    }
-    return Promise.reject('getMarkersFrames not supported on this platform');
-  }
-
-  /**
    * Get bounding box from region
    *
    * @param region Region
@@ -836,32 +812,10 @@ class MapView extends React.Component {
   }
 
   _uiManagerCommand(name) {
-    const UIManager = NativeModules.UIManager;
-    const componentName = getAirMapName(this.props.provider);
-
-    if (!UIManager.getViewManagerConfig) {
-      // RN < 0.58
-      return UIManager[componentName].Commands[name];
-    }
-
-    // RN >= 0.58
-    return UIManager.getViewManagerConfig(componentName).Commands[name];
+    return NativeModules.UIManager[getAirMapName(this.props.provider)].Commands[name];
   }
 
   _mapManagerCommand(name) {
-    const managerName = getAirMapName(this.props.provider);
-
-    if (managerName === 'UI') {
-      const UIManager = NativeModules.UIManager;
-      if (!UIManager.getViewManagerConfig) {
-        // RN < 0.58
-        return UIManager[name];
-      }
-
-      // RN >= 0.58
-      return UIManager.getViewManagerConfig(name);
-    }
-
     return NativeModules[`${getAirMapName(this.props.provider)}Manager`][name];
   }
 
@@ -961,28 +915,14 @@ if (Platform.OS === 'android') {
 }
 const getAirMapComponent = provider => airMaps[provider || 'default'];
 
-let AIRMapLite;
-if (!NativeModules.UIManager.getViewManagerConfig) {
-  // RN < 0.58
-  AIRMapLite = NativeModules.UIManager.AIRMapLite &&
-    requireNativeComponent('AIRMapLite', MapView, {
-      nativeOnly: {
-        onChange: true,
-        onMapReady: true,
-        handlePanDrag: true,
-      },
-    });
-} else {
-  // RN >= 0.58
-  AIRMapLite = NativeModules.UIManager.getViewManagerConfig('AIRMapLite') &&
-    requireNativeComponent('AIRMapLite', MapView, {
-      nativeOnly: {
-        onChange: true,
-        onMapReady: true,
-        handlePanDrag: true,
-      },
-    });
-}
+const AIRMapLite = NativeModules.UIManager.AIRMapLite &&
+  requireNativeComponent('AIRMapLite', MapView, {
+    nativeOnly: {
+      onChange: true,
+      onMapReady: true,
+      handlePanDrag: true,
+    },
+  });
 
 export const Animated = RNAnimated.createAnimatedComponent(MapView);
 
@@ -1004,7 +944,6 @@ MapView.UrlTile = MapUrlTile;
 MapView.LocalTile = MapLocalTile;
 MapView.Overlay = MapOverlay;
 MapView.Callout = MapCallout;
-MapView.CalloutSubview = MapCalloutSubview;
 Object.assign(MapView, ProviderConstants);
 MapView.ProviderPropType = ProviderPropType;
 

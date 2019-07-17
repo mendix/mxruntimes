@@ -17,12 +17,10 @@ const propTypes = {
   ...viewPropTypes,
   tooltip: PropTypes.bool,
   onPress: PropTypes.func,
-  alphaHitTest: PropTypes.bool,
 };
 
 const defaultProps = {
   tooltip: false,
-  alphaHitTest: false,
 };
 
 class MapCallout extends React.Component {
