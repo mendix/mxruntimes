@@ -1,9 +1,8 @@
 \{
   "watchFolders": [
-    "{ProjectDir:HtmlAttributeEncode}/deployment/native",
     "{ProjectDir:HtmlAttributeEncode}/deployment/web/widgets",
     "{ProjectDir:HtmlAttributeEncode}/theme",
-    "{InstallDir:HtmlAttributeEncode}/modeler/tools/node"
+    "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules"
   ],
   "resolver": \{
     "extraNodeModules": \{
@@ -11,8 +10,9 @@
       "@babel/runtime": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/@babel/runtime",
       "mendix": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/mendix",
       "react": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react",
+      "react-native-gesture-handler": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-gesture-handler",
       "react-native": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native",
-      "react-native-ble-px": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-ble-px",
+      "react-native-ble-plx": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-ble-plx",
       "react-native-calendar-events": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-calendar-events",
       "react-native-camera": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-camera",
       "react-native-device-info": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-device-info",
@@ -21,7 +21,7 @@
       "react-native-image-picker": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-image-picker",
       "react-native-inappbrowser-reborn": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-inappbrowser-reborn",
       "react-native-maps": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-maps",
-      "react-native-navigation": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-navigation",
+      "react-navigation": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-navigation",
       "react-native-sound": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-sound",
       "react-native-svg": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-svg",
       "react-native-tab-view": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-tab-view",
@@ -29,7 +29,8 @@
       "react-native-vector-icons": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-vector-icons",
       "react-native-video": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-video",
       "react-native-view-shot": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-view-shot",
-      "react-native-webview": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-webview"
+      "react-native-webview": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-webview",
+      "@react-native-community/async-storage": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/@react-native-community/async-storage"
     \}
   \}
 \}
