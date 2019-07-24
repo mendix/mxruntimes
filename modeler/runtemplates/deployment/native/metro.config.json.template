@@ -1,6 +1,5 @@
 \{
   "watchFolders": [
-    "{ProjectDir:HtmlAttributeEncode}/deployment/web/widgets",
     "{ProjectDir:HtmlAttributeEncode}/theme",
     "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules"
   ],
