@@ -7,7 +7,7 @@
     "extraNodeModules": \{
       "externalWidgets": "{DeploymentDir:HtmlAttributeEncode}/native/externalWidgets",
       "@babel/runtime": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/@babel/runtime",
-      "mendix": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/mendix",
+      "big.js": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/big.js",
       "react": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react",
       "react-native-gesture-handler": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-gesture-handler",
       "react-native": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native",
@@ -30,7 +30,8 @@
       "react-native-view-shot": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-view-shot",
       "react-native-webview": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-webview",
       "@react-native-community/async-storage": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/@react-native-community/async-storage",
-      "@react-native-community/netinfo": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/@react-native-community/netinfo"
+      "@react-native-community/netinfo": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/@react-native-community/netinfo",
+      "mendix": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/mendix"
     \}
   \}
 \}
