@@ -1,6 +1,7 @@
 \{
   "watchFolders": [
     "{ProjectDir:HtmlAttributeEncode}/theme",
+    "{ProjectDir:HtmlAttributeEncode}/javascriptsource",
     "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules"
   ],
   "resolver": \{
@@ -33,5 +34,6 @@
       "@react-native-community/netinfo": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/@react-native-community/netinfo",
       "mendix": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/mendix"
     \}
-  \}
+  \},
+  "cacheVersion": "{MxBuildNumber}"
 \}
