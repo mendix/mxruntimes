@@ -15,6 +15,7 @@
       "react-native-ble-plx": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-ble-plx",
       "react-native-calendar-events": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-calendar-events",
       "react-native-camera": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-camera",
+      "react-native-code-push": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-code-push",
       "react-native-device-info": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-device-info",
       "react-native-firebase": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-firebase",
       "react-native-geocoder": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-geocoder",
@@ -32,6 +33,7 @@
       "react-native-webview": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/react-native-webview",
       "@react-native-community/async-storage": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/@react-native-community/async-storage",
       "@react-native-community/netinfo": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/@react-native-community/netinfo",
+      "eventemitter3": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/eventemitter3",
       "mendix": "{InstallDir:HtmlAttributeEncode}/modeler/tools/node/node_modules/mendix"
     \}
   \},
